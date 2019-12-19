@@ -1,93 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-              
-        }
-        .container{
-            width: 100%;
-            height: 100vh;
-            position: relative; 
-        }
-        .background{
-            width: 100%;
-            height: 100%;
-            background-image: url('./image/sea_close02.jpg');
-            background-position: center;
-            background-size: cover;
-            opacity: 0.9;
-            transition: 3s;
-        }
-        .background:hover{
-            background-position: unset;
-        }
-        
-         
-        #photo{
-            width: 50%;
-            position: absolute;
-            top: 0;
-            left: 25%;
-            z-index: 2;
-            opacity:0.99;   
-        }
-        .wang{
-            position: absolute;
-            top: -15px;
-            left: 25%;
-            transition: 1s;
-        }
-        .wang03{
-            width: 66.5%;
-            opacity: 0.99;
-            
-        }
-        #photo:hover{
-            top:30%;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./RWD.style.css">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <div id="backgroundHover" class="background"></div>
-        <div class="wang">
-            <img class="wang03"src="./image/wang03.jpg" alt="">
+        <div class="left">
+            <div class="logo"></div>
+            <div class="link_all">
+                <div class="link link1">
+                    <a href="https://www.youtube.com/watch?v=CO2-TX6_ZFU">
+                        MORNING!
+                    </a>
+                </div>
+                <div class="link link2">
+                    <a href="https://www.youtube.com/watch?v=O_p5cQ4i1uc">
+                        AFTERNOON!
+                    </a>
+                </div>
+                <div class="link link3">
+                    <a href="https://www.youtube.com/watch?v=b5EFKNmeovM">
+                        GOODNIGHT!
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile">
+                <div class="link_container">
+                    <div class="link link1">
+                        <a href="https://www.youtube.com/watch?v=CO2-TX6_ZFU">
+                            MORNING!
+                        </a>
+                    </div>
+                    <div class="link link2">
+                        <a href="https://www.youtube.com/watch?v=O_p5cQ4i1uc">
+                            AFTERNOON!
+                        </a>
+                    </div>
+                    <div class="link link3">
+                        <a href="https://www.youtube.com/watch?v=b5EFKNmeovM">
+                            GOODNIGHT!
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-         <img id="photo" src="./image/wang05_01.jpg" alt="">
+
+        <div class="right">
+            <div class="r_container">
+                <div id="r_box01" class=" r_box "></div>
+                <div id="r_box02" class=" r_box"></div>
+                <div id="r_box03" class=" r_box"></div>
+            </div>
+        </div>
     </div>
-    
-   
-    
-    
-    <script>
-        var firstPhoto = document.getElementById('photo');
-        var firstImage = "./image/wang05_01.jpg";
-        var newImage = "./image/wang05_02.jpg";
-        var thirdImage = "./image/wang05.jpg";
-        
-
-        firstPhoto.onclick = function(){
-            if(firstPhoto.getAttribute('src') === firstImage){
-                firstPhoto.setAttribute('src',newImage)
-            }
-            else if(firstPhoto.getAttribute('src') === newImage){
-                firstPhoto.setAttribute('src',thirdImage)
-            }
-            else{
-                firstPhoto.setAttribute('src',firstImage)
-            };
-        }
-
-        var hover = document.getElementById('backgroundHover')
-
-        console.log(hover)    
-    </script>
 </body>
+
 </html>
